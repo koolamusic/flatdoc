@@ -22,21 +22,22 @@
     <title>Use Realm</title>
 
     <!-- Flatdoc -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Flatdoc -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
-
     <script src='https://koolamusic.github.io/flatdoc/v/0.9.1/legacy.js'></script>
-    <script src='https://koolamusic.github.io/flatdoc/v/0.9.1/flatdoc.js'></script>
-    <script src='https://koolamusic.github.io/flatdoc/v/0.9.1/theme-white/script.js'></script>
+    <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/flatdoc.js'></script>
 
-    <!-- CSS theme -->
 
+    <!-- Flatdoc theme -->
     <link href='https://koolamusic.github.io/flatdoc/v/0.9.1/theme-white/style.css' rel='stylesheet'>
+    <script src='https://koolamusic.github.io/flatdoc/v/0.9.1/theme-white/script.js'></script>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/a11y-light.min.css">
 
     <!-- Meta -->
-    <meta content="Use Realm" property="og:title">
+    <meta content="Ultimate Backed" property="og:title">
     <meta content="Your Project description goes here." name="description">
 
     <!-- Initializer -->
@@ -50,10 +51,13 @@
         Flatdoc.highlighters.graphql = function (code) {
             return hljs.highlight("javascript", code).value;
         };
+        Flatdoc.highlighters.bash = function (code) {
+            return hljs.highlight("shell", code).value;
+        };
 
 
         Flatdoc.run({
-            fetcher: Flatdoc.github('koolamusic/use-realm')
+            fetcher: Flatdoc.github('juicycleff/ultimate-backend')
         });
     </script>
 </head>
